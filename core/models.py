@@ -14,9 +14,9 @@ class Follow(models.Model):
 
 class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET_NULL, related_name='posts', null=True)
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=250, null=False, blank=False)
     slug = models.SlugField(max_length=250, unique_for_date='published_at', blank=True)
-    description = models.TextField(blank=False)
+    description = models.TextField(blank=False, null=False)
     published_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -35,7 +35,7 @@ class Post(models.Model):
 class Comment(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
-    content = models.TextField(blank=False)
+    content = models.TextField(blank=False, null=False)
     posted_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
