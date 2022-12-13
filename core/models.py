@@ -31,6 +31,15 @@ class Post(models.Model):
             self.slug = "{}{}{}".format(slugify(self.title), "-", self.id)
             Post.objects.filter(id=self.id).update(slug=self.slug)
 
+    def get_comments(self):
+        return self.comments.all()
+
+    def get_comments_count(self):
+        return self.comments.count()
+
+    def get_likes_count(self):
+        return self.likes.count()
+
 
 class Comment(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
