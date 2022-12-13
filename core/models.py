@@ -23,7 +23,7 @@ class Post(models.Model):
         ordering = ('-published_at', 'title')
 
     def __str__(self):
-        return self.title
+        return self.title  # pragma: no cover
 
     def save(self, *args, **kwargs):
         super(Post, self).save(*args, **kwargs)
