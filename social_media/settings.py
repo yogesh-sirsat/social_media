@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', default='django-insecure-$13!b3ric0dt0!i1nwg!eay16(uzn@+*=vfuj))qgb6^yj$pzc')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG'), True
+DEBUG = os.getenv('DEBUG', default=True)
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1',]
 if os.getenv('PROD_HOST'):
@@ -150,7 +150,7 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': False,
 
     'ALGORITHM': 'HS256',
-    'SIGNING_KEY': os.getenv('SECRET_KEY'),
+    'SIGNING_KEY': SECRET_KEY,
     'VERIFYING_KEY': None,
     'AUDIENCE': None,
     'ISSUER': None,
