@@ -1,0 +1,23 @@
+databases:
+  - name: social-media
+    plan: free
+    databaseName: socialmedia
+    user: yogesh
+
+services:
+  - type: web
+    plan: free
+    name: social-media
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn social_media.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: social-media
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+        
