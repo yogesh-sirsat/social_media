@@ -49,3 +49,4 @@ coverage.xml
 
 # dotenv
 .env
+.env.*
