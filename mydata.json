@@ -1,0 +1,747 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add post",
+      "content_type": 7,
+      "codename": "add_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change post",
+      "content_type": 7,
+      "codename": "change_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete post",
+      "content_type": 7,
+      "codename": "delete_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view post",
+      "content_type": 7,
+      "codename": "view_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add comment",
+      "content_type": 8,
+      "codename": "add_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change comment",
+      "content_type": 8,
+      "codename": "change_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete comment",
+      "content_type": 8,
+      "codename": "delete_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view comment",
+      "content_type": 8,
+      "codename": "view_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add follow",
+      "content_type": 9,
+      "codename": "add_follow"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change follow",
+      "content_type": 9,
+      "codename": "change_follow"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete follow",
+      "content_type": 9,
+      "codename": "delete_follow"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view follow",
+      "content_type": 9,
+      "codename": "view_follow"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add like",
+      "content_type": 10,
+      "codename": "add_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change like",
+      "content_type": 10,
+      "codename": "change_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete like",
+      "content_type": 10,
+      "codename": "delete_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view like",
+      "content_type": 10,
+      "codename": "view_like"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$U9u8OnKOJEloD3tRAgEzL8$4U9Cqe5w1qcrnIFCrUbenmh3iwM8bTzsJvtI7c9upKE=",
+      "last_login": "2022-12-12T08:50:44.623Z",
+      "is_superuser": true,
+      "username": "yogesh",
+      "first_name": "",
+      "last_name": "",
+      "email": "yogeshsirsat09@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-12-12T08:48:29.989Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$eWL3uaTD1R4M3x97ol9hNC$1CCwD6xMY80fM8NGAoRDvD2Y+3Ogqj3ZIkULoxQT6Lw=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "test-user",
+      "first_name": "",
+      "last_name": "",
+      "email": "testuser@socialmedia.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-12-12T09:36:26.983Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$MHWjShJbO9y3srFLnlYlJn$t6SS5kTdi8uV4a4HEYWxHLrGCQF2GD0l/dvQ5NWfgSU=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "dummy-user",
+      "first_name": "",
+      "last_name": "",
+      "email": "dummy-user@socialmedia.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-12-12T20:42:07.351Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "core",
+      "model": "post"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "core",
+      "model": "comment"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "core",
+      "model": "follow"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "core",
+      "model": "like"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "nxtb6w50rqpeybxffceoqu5i01gpjife",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSG8HVy69xvIMIBUDSSlXRn_3TbpQrfnnHvfLOC61LCOPIcpsQuT7PTLItIzt12kB7Z759TbMk-R7wk_7OC3nvLrerR_BxVH3dbWGUw6E0SQIhsfvUoooitOWC1RSSgEKECXSMqDTXRWGzcerfJaGfb5AuIMN2g:1p4eWK:kvBHGgZJ7kDK-ONNXt6Z_LFe38n6e_3b4Us9gOSCkGU",
+      "expire_date": "2022-12-26T08:50:44.625Z"
+    }
+  },
+  {
+    "model": "core.follow",
+    "pk": 3,
+    "fields": {
+      "following": 1,
+      "follower": 2,
+      "relation_since": "2022-12-12T19:56:26.724Z"
+    }
+  },
+  {
+    "model": "core.follow",
+    "pk": 4,
+    "fields": {
+      "following": 1,
+      "follower": 3,
+      "relation_since": "2022-12-12T20:52:13.330Z"
+    }
+  },
+  {
+    "model": "core.follow",
+    "pk": 5,
+    "fields": {
+      "following": 2,
+      "follower": 3,
+      "relation_since": "2022-12-12T20:52:18.214Z"
+    }
+  },
+  {
+    "model": "core.post",
+    "pk": 1,
+    "fields": {
+      "author": 2,
+      "title": "New title",
+      "slug": "new-title-1",
+      "description": "New description",
+      "published_at": "2022-12-12T17:15:05.322Z"
+    }
+  },
+  {
+    "model": "core.post",
+    "pk": 3,
+    "fields": {
+      "author": 3,
+      "title": "He was an expert but not in a discipline",
+      "slug": "he-was-an-expert-but-not-in-a-discipline-3",
+      "description": "He knew how to hold the cone just right so that the soft server ice-cream fell into it at the precise angle to form a perfect cone each and every time. It had taken years to perfect and he could now do it without even putting any thought behind it.",
+      "published_at": "2022-12-12T20:47:26.227Z"
+    }
+  },
+  {
+    "model": "core.post",
+    "pk": 4,
+    "fields": {
+      "author": 3,
+      "title": "Dave watched as the forest burned up on the hill.",
+      "slug": "dave-watched-as-the-forest-burned-up-on-the-hill-4",
+      "description": "The car had been hastily packed and Marta was inside trying to round up the last of the pets. Dave went through his mental list of the most important papers and documents that they couldn't leave behind. He scolded himself for not having prepared these better in advance and hoped that he had remembered everything that was needed. He continued to wait for Marta to appear with the pets, but she still was nowhere to be seen.",
+      "published_at": "2022-12-12T20:48:31.796Z"
+    }
+  },
+  {
+    "model": "core.post",
+    "pk": 5,
+    "fields": {
+      "author": 3,
+      "title": "All he wanted was a candy bar.",
+      "slug": "all-he-wanted-was-a-candy-bar-5",
+      "description": "It didn't seem like a difficult request to comprehend, but the clerk remained frozen and didn't seem to want to honor the request. It might have had something to do with the gun pointed at his face.",
+      "published_at": "2022-12-12T20:49:01.315Z"
+    }
+  },
+  {
+    "model": "core.post",
+    "pk": 6,
+    "fields": {
+      "author": 3,
+      "title": "Hopes and dreams were dashed that day.",
+      "slug": "hopes-and-dreams-were-dashed-that-day-6",
+      "description": "It should have been expected, but it still came as a shock. The warning signs had been ignored in favor of the possibility, however remote, that it could actually happen. That possibility had grown from hope to an undeniable belief it must be destiny. That was until it wasn't and the hopes and dreams came crashing down.",
+      "published_at": "2022-12-12T20:49:32.062Z"
+    }
+  },
+  {
+    "model": "core.post",
+    "pk": 7,
+    "fields": {
+      "author": 3,
+      "title": "Dave wasn't exactly sure how he had ended up",
+      "slug": "dave-wasnt-exactly-sure-how-he-had-ended-up-7",
+      "description": "He ran through all the events that had lead to this current situation and it still didn't make sense. He wanted to spend some time to try and make sense of it all, but he had higher priorities at the moment. The first was how to get out of his current situation of being naked in a tree with snow falling all around and no way for him to get down.",
+      "published_at": "2022-12-12T20:50:17.689Z"
+    }
+  },
+  {
+    "model": "core.comment",
+    "pk": 1,
+    "fields": {
+      "author": 3,
+      "post": 1,
+      "content": "This is some awesome thinking!",
+      "posted_at": "2022-12-12T20:56:12.052Z"
+    }
+  },
+  {
+    "model": "core.comment",
+    "pk": 2,
+    "fields": {
+      "author": 3,
+      "post": 1,
+      "content": "You are an amazing writer!",
+      "posted_at": "2022-12-12T21:00:01.129Z"
+    }
+  },
+  {
+    "model": "core.comment",
+    "pk": 3,
+    "fields": {
+      "author": 2,
+      "post": 3,
+      "content": "Wow! You have improved so much!",
+      "posted_at": "2022-12-12T21:08:30.052Z"
+    }
+  },
+  {
+    "model": "core.comment",
+    "pk": 4,
+    "fields": {
+      "author": 2,
+      "post": 3,
+      "content": "You are showing excellent understanding!",
+      "posted_at": "2022-12-12T21:08:53.578Z"
+    }
+  },
+  {
+    "model": "core.comment",
+    "pk": 5,
+    "fields": {
+      "author": 2,
+      "post": 3,
+      "content": "This is clear, concise, and complete!",
+      "posted_at": "2022-12-12T21:09:25.400Z"
+    }
+  },
+  {
+    "model": "core.comment",
+    "pk": 6,
+    "fields": {
+      "author": 2,
+      "post": 4,
+      "content": "What a powerful argument!",
+      "posted_at": "2022-12-12T21:09:48.923Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 1,
+    "fields": {
+      "liked_by": 2,
+      "post": 4,
+      "liked_at": "2022-12-12T21:13:23.476Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 2,
+    "fields": {
+      "liked_by": 2,
+      "post": 3,
+      "liked_at": "2022-12-12T21:13:35.013Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 3,
+    "fields": {
+      "liked_by": 2,
+      "post": 5,
+      "liked_at": "2022-12-12T21:14:33.408Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 4,
+    "fields": {
+      "liked_by": 2,
+      "post": 6,
+      "liked_at": "2022-12-12T21:14:37.065Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 5,
+    "fields": {
+      "liked_by": 2,
+      "post": 7,
+      "liked_at": "2022-12-12T21:14:39.721Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 6,
+    "fields": {
+      "liked_by": 2,
+      "post": 1,
+      "liked_at": "2022-12-12T21:14:41.678Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 7,
+    "fields": {
+      "liked_by": 2,
+      "post": 4,
+      "liked_at": "2022-12-12T21:14:52.054Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 8,
+    "fields": {
+      "liked_by": 2,
+      "post": 6,
+      "liked_at": "2022-12-12T21:14:57.992Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 9,
+    "fields": {
+      "liked_by": 2,
+      "post": 5,
+      "liked_at": "2022-12-12T21:15:02.320Z"
+    }
+  },
+  {
+    "model": "core.like",
+    "pk": 10,
+    "fields": {
+      "liked_by": 2,
+      "post": 4,
+      "liked_at": "2022-12-12T21:15:04.087Z"
+    }
+  }
+]

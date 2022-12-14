@@ -15,4 +15,4 @@ ADD . /app
 # Install any needed packages specified in requirements.txt
 RUN  set -ex \
     && pip install --upgrade pip \
-    && pip install -r requirements_docker.txt 
+    && pip install -r requirements_prod.txt 
