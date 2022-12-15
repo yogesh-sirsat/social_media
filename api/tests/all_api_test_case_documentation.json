@@ -1,0 +1,467 @@
+[
+  {
+    "Test Case Name": "Test user authenticate fail",
+    "Method": "POST",
+    "API Endpoint": "/api/authenticate/",
+    "Test Case Description": "Test that a user cannot authenticate with no data",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/authenticate/ with no or half data",
+      "2. Check if the response status code is 400",
+      "3. Check if the response message is 'Please provide both email and password.'"
+    ]
+  },
+  {
+    "Test Case Name": "Test user authenticate fail",
+    "Method": "POST",
+    "API Endpoint": "/api/authenticate/",
+    "Test Case Description": "Test that a user cannot authenticate with invalid email",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/authenticate/ with invalid email",
+      "2. Check if the response status code is 404",
+      "3. Check if the response message is 'User does not exists.'"
+    ]
+  },
+  {
+    "Test Case Name": "Test user authenticate fail",
+    "Method": "POST",
+    "API Endpoint": "/api/authenticate/",
+    "Test Case Description": "Test that a user cannot authenticate with invalid password",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/authenticate/ with invalid password",
+      "2. Check if the response status code is 401",
+      "3. Check if the response message is 'Incorrect Password.'"
+    ]
+  },
+  {
+    "Test Case Name": "Test user authenticate success",
+    "Method": "POST",
+    "API Endpoint": "/api/authenticate/",
+    "Test Case Description": "Test that a user can authenticate with valid credentials",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/authenticate/ with valid data",
+      "2. Check if the response status code is 200",
+      "3. Check if the response message is 'Authenticated successfully.'"
+    ]
+  },
+  {
+    "Test Case Name": "Test get user data fail",
+    "Method": "GET",
+    "API Endpoint": "/api/user",
+    "Test Case Description": "Test that a user cannot get user data if not authenticated",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a GET request to /api/user",
+      "2. Check if the response status code is 401",
+      "3. Check if the response message is 'User is not authenticated.'"
+    ]
+  },
+  {
+    "Test Case Name": "Test get user data wrong",
+    "Method": "GET",
+    "API Endpoint": "/api/user",
+    "Test Case Description": "Test that a user get wrong user data if authenticated",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/authenticate/ with valid credentials",
+      "2. Send a GET request to /api/user",
+      "3. Check if the response status code is 200",
+      "4. Check if the response data is not equal to the user details"
+    ]
+  },
+  {
+    "Test Case Name": "Test get user data success",
+    "Method": "GET",
+    "API Endpoint": "/api/user",
+    "Test Case Description": "Test that a user can get correct user data if authenticated",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/authenticate/ with valid credentials",
+      "2. Send a GET request to /api/user",
+      "3. Check if the response status code is 200",
+      "4. Check if the response data is equal to the user details"
+    ]
+  },
+  {
+    "Test Case Name": "Test create post unauthenticated user",
+    "Method": "POST",
+    "API Endpoint": "/api/post/",
+    "Test Case Description": "Test that a user can not create a post without authentication",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/post/ without authentication",
+      "2. Check that the response status code is 401",
+      "3. Check that the response data is 'User is not authenticated.'"
+    ]
+  },
+  {
+    "Test Case Name": "Test create post authenticated user",
+    "Method": "POST",
+    "API Endpoint": "/api/post/",
+    "Test Case Description": "Test that a user can create a post with authentication",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/post/ with authentication",
+      "2. Check that the response status code is 201",
+      "3. Check that the post is created in the database",
+      "4. Check that the response data is the correct post data"
+    ]
+  },
+  {
+    "Test Case Name": "Test create post authenticated user invalid data",
+    "Method": "POST",
+    "API Endpoint": "/api/post/",
+    "Test Case Description": "Test that a user can not create a post with invalid data",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/post/ with authentication and invalid data",
+      "2. Check that the response status code is 400",
+      "3. Check that the response data is the correct error message"
+    ]
+  },
+  {
+    "Test Case Name": "Test get post by id",
+    "Method": "GET",
+    "API Endpoint": "/api/post/{post_id}/",
+    "Test Case Description": "Test that a user can get a post by id",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a GET request to /api/post/{post_id}/ with authentication",
+      "2. Check that the response status code is 200",
+      "3. Check that the response data is the correct post data"
+    ]
+  },
+  {
+    "Test Case Name": "Test get post by id fail",
+    "Method": "GET",
+    "API Endpoint": "/api/post/{post_id}/",
+    "Test Case Description": "Test that a user can not get a post by id if it does not exist",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a GET request to /api/post/{post_id}/ with authentication",
+      "2. Check that the response status code is 404",
+      "3. Check that the response data is the correct error message"
+    ]
+  },
+  {
+    "Test Case Name": "Test get all posts by authenticated user",
+    "Method": "GET",
+    "API Endpoint": "/api/all_posts/",
+    "Test Case Description": "Test that a user can get there all created posts.",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a GET request to /api/all_posts/ with authentication",
+      "2. Check that the response status code is 200",
+      "3. Check that the response data is the correct posts data"
+    ]
+  },
+  {
+    "Test Case Name": "Test get all posts by unauthenticated user",
+    "Method": "GET",
+    "API Endpoint": "/api/all_posts/",
+    "Test Case Description": "Test that a user can not get there all created posts without authentication.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a GET request to /api/all_posts/ without authentication",
+      "2. Check that the response status code is 401",
+      "3. Check that the response data is the correct error message"
+    ]
+  },
+  {
+    "Test Case Name": "Test delete post by authenticated user",
+    "Method": "DELETE",
+    "API Endpoint": "/api/post/{post_id}/",
+    "Test Case Description": "Test that a user can delete there own post.",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a DELETE request to /api/post/{post_id}/ with authentication",
+      "2. Check that the response status code is 200",
+      "3. Check that the post is deleted from the database",
+      "4. Check that the response data is the correct message"
+    ]
+  },
+  {
+    "Test Case Name": "Test delete post by authenticated user fail",
+    "Method": "DELETE",
+    "API Endpoint": "/api/post/{post_id}/",
+    "Test Case Description": "Test that a user can not delete a post that does not exist.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a DELETE request to /api/post/{post_id}/ with authentication",
+      "2. Check that the response status code is 404",
+      "3. Check that the response data is the correct error message"
+    ]
+  },
+  {
+    "Test Case Name": "Test delete post by unauthenticated user",
+    "Method": "DELETE",
+    "API Endpoint": "/api/post/{post_id}/",
+    "Test Case Description": "Test that a user can not delete a post without authentication.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a DELETE request to /api/post/{post_id}/ without authentication",
+      "2. Check that the response status code is 401",
+      "3. Check that the response data is the correct error message"
+    ]
+  },
+  {
+    "Test Case Name": "Test delete post by non author",
+    "Method": "DELETE",
+    "API Endpoint": "/api/post/{post_id}/",
+    "Test Case Description": "Test that a user can not delete a post that they did not create.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a DELETE request to /api/post/{post_id}/ with authentication",
+      "2. Check that the response status code is 403",
+      "3. Check that the response data is the correct error message"
+    ]
+  },
+  {
+    "Test Case Name": "Test create comment unauthenticated",
+    "Method": "POST",
+    "API Endpoint": "/api/comment/{post_id}",
+    "Test Case Description": "Test that a user cannot create a comment if not authenticated.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/comment/{post_id} without authentication.",
+      "2. Check that the response status code is 401.",
+      "3. Check that the response data is 'User is not authenticated.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test create comment",
+    "Method": "POST",
+    "API Endpoint": "/api/comment/{post_id}",
+    "Test Case Description": "Test that a user can create a comment if authenticated.",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/comment/{post_id} with authentication.",
+      "2. Check that the response status code is 201.",
+      "3. Check that the comment is created in the database.",
+      "4. Check that the response data is the comment data."
+    ]
+  },
+  {
+    "Test Case Name": "Test create comment invalid post",
+    "Method": "POST",
+    "API Endpoint": "/api/comment/{post_id}",
+    "Test Case Description": "Test that a user cannot create a comment if the post does not exist.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/comment/{post_id} with authentication.",
+      "2. Check that the response status code is 404.",
+      "3. Check that the response data is 'Post does not exists.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test create comment invalid content",
+    "Method": "POST",
+    "API Endpoint": "/api/comment/{post_id}",
+    "Test Case Description": "Test that a user cannot create a comment if the content is empty.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/comment/{post_id} with authentication.",
+      "2. Check that the response status code is 400.",
+      "3. Check that the response data is 'Content is required.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test follow user unauthenticated",
+    "Method": "POST",
+    "API Endpoint": "/api/follow/{user_id}",
+    "Test Case Description": "Test that a user cannot follow another user if not authenticated.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/follow/{user_id} without authentication.",
+      "2. Check that the response status code is 401.",
+      "3. Check that the response data is 'User is not authenticated.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test follow user",
+    "Method": "POST",
+    "API Endpoint": "/api/follow/{user_id}",
+    "Test Case Description": "Test that a user can follow another user if authenticated.",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/follow/{user_id} with authentication.",
+      "2. Check that the response status code is 201.",
+      "3. Check that the follow is created in the database.",
+      "4. Check that the response data is the follow data."
+    ]
+  },
+  {
+    "Test Case Name": "Test follow user invalid user",
+    "Method": "POST",
+    "API Endpoint": "/api/follow/{user_id}",
+    "Test Case Description": "Test that a user cannot follow another user if the user does not exist.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/follow/{user_id} with authentication.",
+      "2. Check that the response status code is 404.",
+      "3. Check that the response data is 'User does not exists.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test follow user invalid follow",
+    "Method": "POST",
+    "API Endpoint": "/api/follow/{user_id}",
+    "Test Case Description": "Test that a user cannot follow another user if the follow already exists.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/follow/{user_id} with authentication.",
+      "2. Check that the response status code is 400.",
+      "3. Check that the response data is 'You are already following this user.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test unfollow user unauthenticated",
+    "Method": "POST",
+    "API Endpoint": "/api/unfollow/{user_id}",
+    "Test Case Description": "Test that a user cannot unfollow another user if not authenticated.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/unfollow/{user_id} without authentication.",
+      "2. Check that the response status code is 401.",
+      "3. Check that the response data is 'User is not authenticated.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test unfollow user",
+    "Method": "POST",
+    "API Endpoint": "/api/unfollow/{user_id}",
+    "Test Case Description": "Test that a user can unfollow another user if authenticated.",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/unfollow/{user_id} with authentication.",
+      "2. Check that the response status code is 200.",
+      "3. Check that the follow is deleted from the database.",
+      "4. Check that the response data is the follow data."
+    ]
+  },
+  {
+    "Test Case Name": "Test unfollow user invalid user",
+    "Method": "POST",
+    "API Endpoint": "/api/unfollow/{user_id}",
+    "Test Case Description": "Test that a user cannot unfollow another user if the user does not exist.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/unfollow/{user_id} with authentication.",
+      "2. Check that the response status code is 404.",
+      "3. Check that the response data is 'User does not exists.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test unfollow user invalid follow",
+    "Method": "POST",
+    "API Endpoint": "/api/unfollow/{user_id}",
+    "Test Case Description": "Test that a user cannot unfollow another user if the follow does not exist.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/unfollow/{user_id} with authentication.",
+      "2. Check that the response status code is 400.",
+      "3. Check that the response data is 'You are not following this user.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test like post unauthenticated",
+    "Method": "POST",
+    "API Endpoint": "/api/like/{post_id}",
+    "Test Case Description": "Test that a user cannot like a post if not authenticated.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/like/{post_id} without authentication.",
+      "2. Check that the response status code is 401.",
+      "3. Check that the response data is 'User is not authenticated.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test like post",
+    "Method": "POST",
+    "API Endpoint": "/api/like/{post_id}",
+    "Test Case Description": "Test that a user can like a post if authenticated.",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/like/{post_id} with authentication.",
+      "2. Check that the response status code is 201.",
+      "3. Check that the like is created in the database.",
+      "4. Check that the response data is the like data."
+    ]
+  },
+  {
+    "Test Case Name": "Test like post invalid post",
+    "Method": "POST",
+    "API Endpoint": "/api/like/{post_id}",
+    "Test Case Description": "Test that a user cannot like a post if the post does not exist.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/like/{post_id} with authentication.",
+      "2. Check that the response status code is 404.",
+      "3. Check that the response data is 'Post does not exists.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test like post invalid like",
+    "Method": "POST",
+    "API Endpoint": "/api/like/{post_id}",
+    "Test Case Description": "Test that a user cannot like a post if the like already exists.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/like/{post_id} with authentication.",
+      "2. Check that the response status code is 400.",
+      "3. Check that the response data is 'You have already liked this post.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test unlike post unauthenticated",
+    "Method": "POST",
+    "API Endpoint": "/api/unlike/{post_id}",
+    "Test Case Description": "Test that a user cannot unlike a post if not authenticated.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/unlike/{post_id} without authentication.",
+      "2. Check that the response status code is 401.",
+      "3. Check that the response data is 'User is not authenticated.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test unlike post",
+    "Method": "POST",
+    "API Endpoint": "/api/unlike/{post_id}",
+    "Test Case Description": "Test that a user can unlike a post if authenticated.",
+    "Positive or Negative": "Positive",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/unlike/{post_id} with authentication.",
+      "2. Check that the response status code is 200.",
+      "3. Check that the like is deleted from the database.",
+      "4. Check that the response data is the like data."
+    ]
+  },
+  {
+    "Test Case Name": "Test unlike post invalid post",
+    "Method": "POST",
+    "API Endpoint": "/api/unlike/{post_id}",
+    "Test Case Description": "Test that a user cannot unlike a post if the post does not exist.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/unlike/{post_id} with authentication.",
+      "2. Check that the response status code is 404.",
+      "3. Check that the response data is 'Post does not exists.'."
+    ]
+  },
+  {
+    "Test Case Name": "Test unlike post invalid like",
+    "Method": "POST",
+    "API Endpoint": "/api/unlike/{post_id}",
+    "Test Case Description": "Test that a user cannot unlike a post if the like does not exist.",
+    "Positive or Negative": "Negative",
+    "Test Case Steps": [
+      "1. Send a POST request to /api/unlike/{post_id} with authentication.",
+      "2. Check that the response status code is 400.",
+      "3. Check that the response data is 'You have not liked this post.'."
+    ]
+  }
+]
